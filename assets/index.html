@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sum app</title>
+  </head>
+  <body>
+    <h1>Sum app</h1>
+    <script>
+      if ('serviceWorker' in navigator) {
+        try {
+          navigator.serviceWorker.register('/sw.js')
+        } catch (error) {
+          console.error(`Registration failed with ${error}`);
+        }
+      }
+    </script>
+  </body>
+</html>
